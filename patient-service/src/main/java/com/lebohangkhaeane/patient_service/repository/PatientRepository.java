@@ -10,4 +10,21 @@ import java.util.List;
 public class PatientRepository {
 
     private List<Patient> patients = new ArrayList<>();
+
+    public Patient addPatient(Patient patient) {
+        patients.add(patient);
+        return patient;
+    }
+
+    public Patient findById(Long id) {
+        return patients.stream()
+                .filter(patient ->
+                        patient.getId().equals(id))
+                .findFirst()
+                .orElseThrow();
+    }
+
+    public List<Patient> findAll() {
+        return patients;
+    }
 }
