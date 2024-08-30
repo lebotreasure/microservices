@@ -13,12 +13,16 @@
         <module name="service-registry" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="doctors-service" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-gateway" options="-parameters" />
       <module name="appointment-service" options="-parameters" />
       <module name="config-server" options="-parameters" />
+      <module name="doctors-service" options="-parameters" />
       <module name="patient-service" options="-parameters" />
       <module name="service-registry" options="-parameters" />
     </option>
